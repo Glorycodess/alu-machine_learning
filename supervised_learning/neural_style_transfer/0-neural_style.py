@@ -96,7 +96,4 @@ class NST:
             method=tf.image.ResizeMethod.BICUBIC
         )
 
-        # Clip values to [0, 1] to remove overshoot from bicubic interpolation
-        resized = tf.clip_by_value(resized, 0.0, 1.0)
-
         return resized
